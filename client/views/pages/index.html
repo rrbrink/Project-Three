@@ -1,0 +1,87 @@
+<template name="index">
+  <div class="indexBackgroundPhoto"></div>
+  <div class="indexBackgroundGradient"></div>
+  <div class="indexGM">
+  <!--  div the shows up from bottom-->
+    <div class="locationBox row card-panel resultsContainer-desktopMain donotShow">
+        <!-- <h5>Found Locations</h5> -->
+          {{#if thereAreLocations}}
+            {{> locations}}
+          {{else}}
+            {{ foundLocations }}
+          {{/if}}
+
+    </div>
+  <!-- end of search results div -->
+    <div class="mainLogoIndex">
+     <img src="img/logo-white.png" alt="Open Close" width="500" class="mainLogo-Desktop">
+    </div>
+<!-- desktop version-->
+    <div class="row noMargin-Bottom">
+      <div class="col s1 height-onethird border-onbottom"></div>
+    </div>
+    <div class="row noMargin-Bottom">
+      <div class="pinMainContainer hatch wobble">
+      </div>
+      <div class="mainSearch">
+        <!-- <nav class="wrapperNav-MainPage scale-transition scale-out"> -->
+          <div class="formSearch">
+            <nav>
+            <a href="/home">
+              <div class="nav-wrapper searchForm-navwrapper">
+               <h3>Search</h3>
+                 <!--  <form> -->
+                    <!-- <div class="input-field search-Holder">
+                      <input id="keyword" type="text" class="validate searchInputField-Main" placeholder="Search...">
+                      <label class="label-icon" for="search"><i class="material-icons iconPos" style="color:black;">search</i></label>
+                    </div> -->
+                   <!--  <div class="zipcode-Holder">
+                      <input id="zipcode" type="text" class="validate" placeholder="ZipCode">
+                    </div>
+                    <div class="radius-Holder">
+                      <select id="radius" class="waves-effect waves-light browser-default">
+                        <label>Radius(Miles)</label>
+                        <option value="" disabled selected>Nearby?</option>
+                        <option value="8000">5 Miles</option>
+                        <option value="16000">10 Miles</option>
+                        <option value="33000">20 Miles</option>
+                        <option value="50000">30 Miles</option>
+                      </select>
+                    </div> -->
+                    <!-- <input type="submit" class="submitButton-searchForm" value="submit"> -->
+                <!-- </form> -->
+              </div>
+            </a>
+           </nav>
+          </div>
+      </div>
+      <div class="col s1 height-onethird border-onbottom"></div>
+      </div>
+    <div class="row noMargin-Bottom">
+      <div class="socialLinksContainer">
+        <div class="socialLinksBottom">
+          <!-- <a class="socialMenuLinks" href="#"> instagram</a> -->
+          <a class="socialMenuLinks" href="https://github.com/StefanieDing/ProjectThree">Github</a>
+          <!-- <a class="socialMenuLinks" href="#">Linkedin</a> -->
+          <div class="userCreation">
+            <a href="/sign-in" class="waves-effect waves-light btn red lighten-2 signButtons signIn-Desktop noPositionRelative marginRight-Button">Log In</a>
+            <a href="/sign-up" class="waves-effect waves-light btn red lighten-2 signButtons signUp-Desktop noPositionRelative">SignUp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- original home page/ has helpers from hope template -->
+
+
+<div class="container">
+  <div class="col s8 right">
+    {{#if thereIsEmail}}
+      {{> chat}}
+    {{/if}}
+  </div>
+</div>
+
+
+</template>
